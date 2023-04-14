@@ -477,6 +477,8 @@ export const Image = withBuilder(ImageComponent, {
           .then(blob => {
             if (blob.type.includes('svg')) {
               options.set('noWebp', true);
+            } else {
+              options.delete('noWebp');
             }
           });
 
